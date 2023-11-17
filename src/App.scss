@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  margin: 1.5rem;
+  margin: 0;
 }
 
 body,
@@ -102,4 +102,9 @@ button:disabled {
 hr {
   border: 2px solid black;
   margin: 2rem auto;
+}
+
+a{
+  text-decoration: none;
+  transition: all 35s;
 }

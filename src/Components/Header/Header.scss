@@ -1,0 +1,81 @@
+$primaria: #409A75;
+$secundaria: #2E6E66;
+$cinza: #666666;
+$black: #333333;
+$cinza-light: #999999;
+
+.header{
+    background: linear-gradient(93.33deg, #2E6E66 0.75%, #0D5E53 99.2%);
+    border-radius: 0px 0px 60px 60px;
+    position: relative;
+    overflow: hidden;
+  
+    .container{
+      position: relative;
+      z-index: 5;
+    }
+  
+    h1{
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 40px;
+      color: white;
+      margin: 0;
+    }
+  
+    p{
+      margin-bottom: 0;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 190%;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.6);
+    }
+  
+    .topo{
+      display: flex;
+      gap: 40px;
+    }
+    
+    .logo{
+      padding: 15px 0;
+      display: inline-block;
+    }
+  
+    .menu{
+      display: flex;
+      list-style: none;
+      gap: 30px;
+      margin-top: 20px;
+  
+      li{
+        a{
+          color: white;
+          opacity: .8;
+          font-size: 15px;
+          line-height: 18px;
+          display: inline-block;
+          position: relative;
+          padding: 15px 0;
+  
+          &:after{
+            content:"";
+            width: 0;
+            height: 1px;
+            background: $primaria;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 8px;
+            transition: all .35s;
+          }
+  
+          &.active, &:hover{
+            &:after{
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
