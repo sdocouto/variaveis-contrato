@@ -1,0 +1,28 @@
+@import '../../Colors.scss';
+
+.bg-conteudo{
+    padding: 35px 100px;
+    background: white;
+    border-radius: 20px;
+  
+    h3{
+      margin-bottom: 15px;
+    }
+  
+    p{
+      color: $cinza;
+      font-size: 14px;
+      line-height: 26px;
+    }
+  
+    iframe{
+      width: 100%;
+      height: 450px;
+      margin: 0 0 20px 0;
+    }
+  
+    img{
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+}
