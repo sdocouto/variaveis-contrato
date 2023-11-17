@@ -1,19 +1,24 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import LogoSvg from '../../Assets/SVG/logo.svg'
 import './Menu.scss'
 
 const Menu = () => {
   return (
     <div className="topo">
-        <a href="/home" className="logo">
+        <NavLink to="/" end className="logo">
             <img src={LogoSvg} alt="" />
-        </a>
+        </NavLink>
         <ul className="menu">
             <li>
-                <a href="/home">Váriáveis de contrato</a>
+                <NavLink to="/" end>
+                    Váriáveis de contrato
+                </NavLink>
             </li>
             <li>
-                <a href="/entenda-as-condicoes-dos-contratos">Entenda as condicionais dos contratos</a>
+                <NavLink to="condicionaiscontrato">
+                    Entenda as condicionais dos contratos
+                </NavLink>
             </li>
         </ul>
     </div>
