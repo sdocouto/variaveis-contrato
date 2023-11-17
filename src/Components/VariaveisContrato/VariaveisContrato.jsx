@@ -2,7 +2,7 @@ import React from 'react'
 
 const Content = () => {
   return (
-    <div>Content</div>
+    <div>Variaveis de Contrato</div>
   )
 }
 

@@ -1,8 +1,4 @@
-$primaria: #409A75;
-$secundaria: #2E6E66;
-$cinza: #666666;
-$black: #333333;
-$cinza-light: #999999;
+@import '../../Colors.scss';
 
 .header{
     background: linear-gradient(93.33deg, #2E6E66 0.75%, #0D5E53 99.2%);
@@ -31,51 +27,65 @@ $cinza-light: #999999;
       text-align: center;
       color: rgba(255, 255, 255, 0.6);
     }
-  
-    .topo{
-      display: flex;
-      gap: 40px;
-    }
-    
-    .logo{
-      padding: 15px 0;
-      display: inline-block;
-    }
-  
-    .menu{
-      display: flex;
-      list-style: none;
-      gap: 30px;
-      margin-top: 20px;
-  
-      li{
-        a{
-          color: white;
-          opacity: .8;
-          font-size: 15px;
-          line-height: 18px;
-          display: inline-block;
-          position: relative;
-          padding: 15px 0;
-  
-          &:after{
-            content:"";
-            width: 0;
-            height: 1px;
-            background: $primaria;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: 8px;
-            transition: all .35s;
-          }
-  
-          &.active, &:hover{
-            &:after{
-              width: 100%;
-            }
-          }
-        }
-      }
+
+    .content{
+        text-align: center;
+        width: 100%;
     }
   }
+  .blob g{
+	transform: translateX(300px) translateY(300px);
+  }
+  
+.blob-1{
+	path{
+		fill: $primaria;
+	}
+}
+.blob-2{
+	path{
+		fill: #dff6f1;
+    	opacity: .7;
+	}
+}
+.blob-inovacao1{
+	position: absolute;
+    top: 0;
+    left: -360px;
+    z-index: 1;
+}
+.blob-inovacao2{
+	position: absolute;
+  top: -540px;
+    right: -220px;
+    z-index: 4;
+}
+.ajusteBlob-inovacao1{
+	position: absolute;
+	top: -70px;
+    left: -340px;
+    z-index: 4;
+}
+.ajusteBlob-inovacao1{
+	path{
+		stroke-width: .5px;
+		fill: rgba(105, 105, 114, 0);
+		stroke: rgba($primaria, .2);
+		opacity: 1;
+	}
+}
+.dotsInovacao2{
+	position: absolute;
+	right: 10%;
+    bottom: -120px;
+    transform: translateX(-50%) rotate(90deg);
+	animation: dots2 1s infinite linear
+}
+@keyframes dots2 {
+  0% {
+  bottom: -80px;
+  }
+  100% {
+  bottom: -105px;
+  }
+}
