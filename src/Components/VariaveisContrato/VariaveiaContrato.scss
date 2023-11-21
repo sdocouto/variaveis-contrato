@@ -1,0 +1,189 @@
+@import '../../Colors.scss';
+
+.searchBox{
+    flex-grow: 0;
+    margin-bottom: 55px;
+    margin-top: -43px;
+    position: relative;
+    z-index: 10;
+    .ais-SearchBox {
+    
+        .ais-SearchBox-submit{
+            display: none;
+        }
+    
+        input[type="search"]::-webkit-search-decoration,
+        input[type="search"]::-webkit-search-cancel-button,
+        input[type="search"]::-webkit-search-results-button,
+        input[type="search"]::-webkit-search-results-decoration {
+        -webkit-appearance:none;
+        }
+    
+        .ais-SearchBox-input {
+            position: relative;
+            height: auto;
+            width: 100%;
+            max-width: 100%;
+            width: 100%;
+            padding: 8px 16px 8px 66px;
+            font-weight: normal;
+            border: none;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            -webkit-appearance: none;
+            appearance: none;
+            background: #FFFFFF;
+            box-shadow: 0px 4px 45px rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            height: 80px;
+            font-size: 14px;
+            line-height: 190%;
+            color: $cinza;
+        }
+    
+        .ais-SearchBox-reset{
+            background: none;
+            padding: 0;
+            border: none;
+            right: 30px;
+            position: absolute;
+            left: inherit;
+            right: 10px !important;
+            top: 39%;
+            transform: translateY(-100%);
+            margin: 14px 16px;
+            cursor: pointer;
+    
+            svg {
+                width: 13px;
+                height: 13px;
+                display: block;
+                fill: #ed5a6a;
+            }
+        }
+    }
+    .searchBox--icon{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-100%);
+        margin: 14px 16px;
+        cursor: pointer;
+        z-index: 2;
+    
+        svg{
+            width: 28px;
+            height: 28px;
+            display: block;
+        }
+    }
+}
+.variaveis-wrap{
+    display: flex;
+    gap: 30px;
+
+    .--left-column{
+        width: 300px;
+    }
+    
+    .--right-column{
+        flex: 1;
+    }
+}
+h3{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: $black;
+    margin: 0 0 10px 0;
+}
+
+h2{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    color: $black;
+    margin: 0 0 10px 0;
+}
+input[type=checkbox]{
+    accent-color: $primaria;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: 3px;
+}
+.ais-RefinementList-item{
+    margin-bottom: 10px;
+}
+.ais-RefinementList-checkbox {
+    margin: 0 5px 0 0;
+}
+.ais-RefinementList-labelText,
+.ais-RefinementList-labelText:hover {
+  color: $primaria;
+  width: 100%;
+}
+.ais-RefinementList-labelText{
+  font-size: 14px;
+  line-height: 16px;
+  color: $black;
+  cursor: pointer;
+  transition: all .35s;
+  text-transform: capitalize;
+}
+.ais-RefinementList-item--selected{
+    .ais-RefinementList-labelText{
+        color: $primaria;
+    }
+}
+.ais-RefinementList-count {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: $cinza;
+    padding: 3px;
+    border-radius: 4px;
+    background: #E4E4E4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    height: 22px;
+    min-width: 22px;
+}
+.ais-RefinementList-item--selected{
+    .ais-RefinementList-count {
+        background: rgba(64, 154, 117, .15);
+        color: $primaria;
+    }
+}
+.--header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    .stats{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    
+        h2{
+            margin-bottom: 0;
+            line-height: 23px;
+        }
+    
+        span{
+            font-size: 12px;
+            color: $cinza;
+            display: inline-block;
+            margin-top: 4px;
+        }
+    }
+
+    .pagesCount{
+        font-size: 12px;
+        line-height: 14px;
+        color: $cinza;
+    }
+}
