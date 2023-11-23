@@ -117,3 +117,37 @@ body {
         max-width: 540px;
     }
 }
+.btnCopy{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(64,154,117,.15);
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 0;
+  border: 0;
+  flex-shrink: 0;
+  
+  svg{
+    width: 16px;
+    height: 18px;
+    path{
+      fill: $primaria;
+    }
+  }
+
+  &.-copied{
+    background: rgba(64,154,117,1);
+
+    svg{
+        width: 18px;
+        height: 20px;
+        path{
+            fill: white;
+        }
+    }
+  }
+  
+}

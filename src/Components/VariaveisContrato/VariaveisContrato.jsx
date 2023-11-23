@@ -17,46 +17,60 @@ import {
 import ClicktoCopy from '../Util/ClicktoCopy';
 
 import './VariaveiaContrato.scss';
+import Modal from './Modal';
 
-const searchClient = algoliasearch('89C7L2D0QR', 'eb362a15143717c276fb2564b952f880');
 
-function Hit({ hit }) {
-  return (
-    <article>
-      {/* <p>{hit.categoria[0]}</p>
-      <h1>{hit.nome}</h1>
-      <p>${hit.descricao}</p>
-      <p>${hit.variavel}</p>
-      <p>${hit.variavel_word}</p>
-      <Highlight attribute="nome" hit={hit} /> */}
+const VariaveisContrato = () => {
 
-      <div className="hit">
-        <div className="hit-content">
-          <div>
-            <div className="hit-name">{hit.nome}</div>
-            <div className="hit-description copy-content">{hit.variavel}</div>
+
+  const [isOpen, setIsOpen] = React.useState(false);
+  const [nome, setNome] = React.useState();
+  const [variavel, setVariavel] = React.useState();
+  const [descricao, setDescricao] = React.useState();
+
+
+  const searchClient = algoliasearch('89C7L2D0QR', 'eb362a15143717c276fb2564b952f880');
+  
+  function Hit({ hit }) {
+    return (
+      <article className='hit-wrap'>
+        <div className="hit" onClick={() => handleOpenModal(hit)}>
+          <div className="hit-content">
+            <div>
+              <div className="hit-name">{hit.nome}</div>
+              <div className="hit-description copy-content">{hit.variavel}</div>
+            </div>
           </div>
         </div>
         <ClicktoCopy copyText={hit.variavel} />
-      </div>
-    </article>
-  );
-}
-
-function CustomStats() {
-  let {
-    nbPages,
-    page,
-  } = useStats();
-
-  if(nbPages == 0){
-    nbPages = 1;
+      </article>
+    );
+  }
+  
+  function CustomStats() {
+    let {
+      nbPages,
+      page,
+    } = useStats();
+  
+    if(nbPages == 0){
+      nbPages = 1;
+    }
+  
+    return <div className='pagesCount'>Página {page + 1} de {nbPages}</div>;
   }
 
-  return <div className='pagesCount'>Página {page + 1} de {nbPages}</div>;
-}
+  function handleOpenModal(hit){
+    if(hit){
+      setIsOpen(!isOpen);
+      setNome(hit.nome);
+      setVariavel(hit.variavel);
+      setDescricao(hit.descricao);
+    }else{
+      setIsOpen(false);
+    }
+  }
 
-const VariaveisContrato = () => {
   return (
     <div className='container'>
       <InstantSearch searchClient={searchClient} indexName="producao">
@@ -110,7 +124,13 @@ const VariaveisContrato = () => {
         </div>
       </div>      
     </InstantSearch>
-
+    <Modal
+      isOpen={isOpen}
+      onClick={handleOpenModal}
+      nome={nome}
+      variavel={variavel}
+      descricao={descricao}
+    />
     </div>
   )
 }
