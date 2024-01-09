@@ -51,11 +51,11 @@ $sides: (top, bottom, left, right);
 
 ::-moz-selection{
 	color:white;
-	background:$secundaria;
+	background:$secondary;
 }
 ::selection{
 	color:white;
-	background:$secundaria;
+	background:$secondary;
 }
 ul{
 	padding: 0;
@@ -135,20 +135,16 @@ body {
     width: 16px;
     height: 18px;
     path{
-      fill: $primaria;
+      fill: $primary;
     }
   }
 
   &.-copied{
     background: rgba(64,154,117,1);
 
-    svg{
-        width: 18px;
+    img{
+        width: 20px;
         height: 20px;
-        path{
-            fill: white;
-        }
     }
   }
-  
 }

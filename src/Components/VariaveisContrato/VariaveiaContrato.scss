@@ -44,7 +44,7 @@
             height: 80px;
             font-size: 14px;
             line-height: 190%;
-            color: $cinza;
+            color: $gray;
         }
     
         .ais-SearchBox-reset{
@@ -77,7 +77,7 @@
         cursor: pointer;
         z-index: 2;
     
-        svg{
+        img{
             width: 28px;
             height: 28px;
             display: block;
@@ -109,7 +109,7 @@
     align-items: center;
     width: 100%;
     border-radius: 10px;
-    background: $primaria;
+    background: $primary;
     color: white;
     border: 0;
     padding: 10px 20px;
@@ -153,7 +153,7 @@ h2{
     margin: 0 0 10px 0;
 }
 input[type=checkbox]{
-    accent-color: $primaria;
+    accent-color: $primary;
     width: 15px;
     height: 15px;
     position: relative;
@@ -178,7 +178,7 @@ input[type=checkbox]{
 }
 .ais-RefinementList-labelText,
 .ais-RefinementList-labelText:hover {
-  color: $primaria;
+  color: $primary;
   width: 100%;
 }
 .ais-RefinementList-labelText{
@@ -191,14 +191,14 @@ input[type=checkbox]{
 }
 .ais-RefinementList-item--selected{
     .ais-RefinementList-labelText{
-        color: $primaria;
+        color: $primary;
     }
 }
 .ais-RefinementList-count {
     font-weight: 500;
     font-size: 12px;
     line-height: 14px;
-    color: $cinza;
+    color: $gray;
     padding: 3px;
     border-radius: 4px;
     background: #E4E4E4;
@@ -212,7 +212,7 @@ input[type=checkbox]{
 .ais-RefinementList-item--selected{
     .ais-RefinementList-count {
         background: rgba(64, 154, 117, .15);
-        color: $primaria;
+        color: $primary;
     }
 }
 .--header{
@@ -233,7 +233,7 @@ input[type=checkbox]{
     
         span{
             font-size: 12px;
-            color: $cinza;
+            color: $gray;
             display: inline-block;
             margin-top: 4px;
         }
@@ -242,7 +242,7 @@ input[type=checkbox]{
     .pagesCount{
         font-size: 12px;
         line-height: 14px;
-        color: $cinza;
+        color: $gray;
     }
 }
 .ais-SearchBox-loadingIndicator{
@@ -339,7 +339,7 @@ input[type=checkbox]{
       border: none;
       background: none;
       pointer-events: none;
-      color: $cinza-light;
+      color: $gray-light;
       font-size: 12px;
       line-height: 19px;
       font-weight: 600;
@@ -382,7 +382,7 @@ input[type=checkbox]{
     height: 35px;
     margin: 4px;
     background: rgba(64, 154, 117, .15);
-    color: $primaria;
+    color: $primary;
     list-style-image: none;
     list-style-position: outside;
     list-style-type: none;
@@ -399,7 +399,7 @@ input[type=checkbox]{
   
   .ais-Pagination-item:hover,
   .ais-Pagination-item--selected {
-    background-color: $primaria;
+    background-color: $primary;
     a{
         color: white !important;
     }
@@ -408,11 +408,9 @@ input[type=checkbox]{
   .ais-Pagination-item .ais-Pagination-link,
   .ais-Pagination-item__disabled .ais-Pagination-link {
     text-decoration: none;
-    color: $primaria;
+    color: $primary;
     font-size: 12px;
     line-height: 14px;
-    font-weight: 500;
-    display: block;
     font-weight: 500;
     width: 100%;
     height: 100%;
@@ -442,7 +440,7 @@ input[type=checkbox]{
     border-radius: 4px;
     width: 200px;
     padding: 10px;
-    color: $cinza;
+    color: $gray;
 }
 .hit-wrap{
     position: relative;
