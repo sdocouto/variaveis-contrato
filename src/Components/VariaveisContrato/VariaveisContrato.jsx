@@ -15,6 +15,7 @@ import {
   HitsPerPage
 } from 'react-instantsearch';
 import ClicktoCopy from '../Util/ClicktoCopy';
+import ArrowDown from '../../Assets/SVG/arrow-down.svg'
 
 import './VariaveiaContrato.scss';
 import Modal from './Modal';
@@ -27,6 +28,7 @@ const VariaveisContrato = () => {
   const [nome, setNome] = React.useState();
   const [variavel, setVariavel] = React.useState();
   const [descricao, setDescricao] = React.useState();
+  const [categoriasMobile, setCategoriasMobile] = React.useState();
 
 
   const searchClient = algoliasearch('89C7L2D0QR', 'eb362a15143717c276fb2564b952f880');
@@ -71,6 +73,10 @@ const VariaveisContrato = () => {
     }
   }
 
+  function handleCategoriasMobile(){
+    setCategoriasMobile(!categoriasMobile);
+  }
+
   return (
     <div className='container'>
       <InstantSearch searchClient={searchClient} indexName="producao">
@@ -86,8 +92,12 @@ const VariaveisContrato = () => {
       </div>
       <div className="variaveis-wrap">
         <div className="--left-column">
-          <h3>Categorias</h3>
-          <RefinementList attribute="categoria" sortBy={['name:asc']} limit={30}  />
+          <h3 className='categorias-title'>Categorias</h3>
+          <button className={`btn-collapse-categoria ${categoriasMobile ? 'active' : ''}`} onClick={handleCategoriasMobile}>
+            Ver Categorias
+            <img src={ArrowDown} alt="" />
+          </button>
+          <RefinementList attribute="categoria" className={categoriasMobile ? 'active' : ''} sortBy={['name:asc']} limit={30}  />
         </div>
         <div className="--right-column">
           <div className="--header">

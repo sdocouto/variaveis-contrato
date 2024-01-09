@@ -4,6 +4,10 @@
     padding: 35px 100px;
     background: white;
     border-radius: 20px;
+
+    @media (max-width: 998px){
+        padding: 30px;
+    }
   
     h3{
       margin-bottom: 15px;

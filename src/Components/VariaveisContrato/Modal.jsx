@@ -15,7 +15,7 @@ const Modal = ({isOpen = false, onClick, nome, variavel, descricao}) => {
         return () => {
           window.removeEventListener('keydown', handleEsc);
         };
-      }, []);
+    }, []);
 
     return (
         isOpen && 

@@ -6,6 +6,11 @@
     margin-top: -43px;
     position: relative;
     z-index: 10;
+
+    @media (max-width: 998px){
+        margin-bottom: 35px;;
+    }
+
     .ais-SearchBox {
     
         .ais-SearchBox-submit{
@@ -83,12 +88,53 @@
     display: flex;
     gap: 30px;
 
+    @media (max-width: 998px){
+        flex-direction: column;
+    }
+
     .--left-column{
         width: 300px;
+
+        @media (max-width: 998px){
+            width: 100%;
+        }
     }
     
     .--right-column{
         flex: 1;
+    }
+}
+.btn-collapse-categoria{
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+    background: $primaria;
+    color: white;
+    border: 0;
+    padding: 10px 20px;
+    display: none;
+    
+    @media (max-width: 998px){
+        display: flex;
+    }
+
+    img{
+        width: 30px;
+        height: 30px;
+        transform: rotate(0);
+        transition: all .35s;
+    }
+
+    &.active{
+        img{
+            transform: rotate(180deg)
+        }
+    }
+}
+.categorias-title{
+    @media (max-width: 998px){
+        display: none;
     }
 }
 h3{
@@ -112,6 +158,17 @@ input[type=checkbox]{
     height: 15px;
     position: relative;
     top: 3px;
+}
+.ais-RefinementList{
+    @media (max-width: 998px){
+        background: white;
+        padding: 20px;
+        display: none;
+
+        &.active{
+            display: block;
+        }
+    }
 }
 .ais-RefinementList-item{
     margin-bottom: 10px;
@@ -273,6 +330,10 @@ input[type=checkbox]{
     transition: all .35s;
     cursor: pointer;
     margin-bottom: 20px;
+
+    .hit-name{
+        word-break: break-all;
+    }
   
     .hit-description{
       border: none;
@@ -285,6 +346,7 @@ input[type=checkbox]{
       width: 100%;
       margin-top: 10px;
       margin-bottom: 0;
+      word-break: break-all;
     }
   
     &:hover{
@@ -306,6 +368,11 @@ input[type=checkbox]{
     .ais-Pagination-list{
         display: flex;
         gap: 5px;
+
+        @media (max-width: 998px){
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
   }
   
@@ -363,6 +430,11 @@ input[type=checkbox]{
     justify-content: space-between;
     align-items: center;
     margin-top: 50px;
+
+    @media (max-width: 998px){
+        flex-direction: column;
+        gap: 10px
+    }
 }
 .ais-HitsPerPage-select{
     height: 43px;
