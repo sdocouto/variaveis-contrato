@@ -84,7 +84,7 @@ const CondicionaisContrato = () => {
 
             <h3 className="m-t-30">4 - Adicionando uma Variável Extra </h3>
 
-            <p>O processo para adicionar uma variável extra segue a mesma linha das imagens, <b>Opções>Variáveis>Criar nova Variável</b> e preencher as informações solicitadas. </p>
+            <p>O processo para adicionar uma variável extra segue a mesma linha das imagens, <b>Opções&gt;Variáveis&gt;Criar nova Variável</b> e preencher as informações solicitadas. </p>
             
             <ul>
                 <li>Nome: Será o nome de identificação da variável. Ex: Nome do Filho.</li>
