@@ -13,8 +13,8 @@ const App = () => {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path='/' element={<VariaveisContrato />} />
-        <Route path='condicionaiscontrato' element={<CondicionaisContrato />} />
+        <Route path='variaveis-contrato' element={<VariaveisContrato />} />
+        <Route path='variaveis-contrato/condicionaiscontrato' element={<CondicionaisContrato />} />
       </Routes>
       <Footer />
     </BrowserRouter>

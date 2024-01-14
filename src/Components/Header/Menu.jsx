@@ -11,12 +11,12 @@ const Menu = () => {
         </NavLink>
         <ul className="menu">
             <li>
-                <NavLink to="/" end>
+                <NavLink to="variaveis-contrato" end>
                     Váriáveis de contrato
                 </NavLink>
             </li>
             <li>
-                <NavLink to="condicionaiscontrato">
+                <NavLink to="variaveis-contrato/condicionaiscontrato">
                     Entenda as condicionais dos contratos
                 </NavLink>
             </li>
